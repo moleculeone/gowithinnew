@@ -1,0 +1,139 @@
+.App {
+  text-align: center;
+}
+
+body{
+  
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.page {
+  height: calc(100vh - 0px);
+  overflow: auto;
+  /* background-image: url(img/falls.png); */
+  background-image: url(img/med3.jpg);
+  background-size: cover;
+  /* <------ */
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+.filter-details {
+  background-color: rgb(243, 242, 242);
+  position: fixed;
+  width: calc(96vw);
+  padding: 9px;
+  box-shadow: 10px 5px 5px #15141457;
+}
+
+.filter-detail-title {
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: baseline;
+  padding: 0px;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+
+.start {
+
+  /* height: calc(100vh); */
+  background-color: rgb(255, 265, 255);
+  z-index: 99;
+  text-align: center;
+  /* background-image: url(img/road.webp); */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.item-image-start {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px;
+  top: 15%;
+  left: 15%
+}
+
+.sticky {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 276px;
+  margin-top: 4px;
+  margin-bottom: 42px;
+}
+
+.stickyHead {
+  color: white;
+  font-size: 16px;
+  margin: 4px;
+}
+
+.menu-bar {
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  height: 28px;
+  font-size: 18px;
+  background-color: rgb(15 105 91);
+  z-index: 1000;
+  width: 98%;
+}
+
+.filter-panel {
+  z-index: 500;
+  top: 42px;
+  position: absolute;
+}
+
+.menu-bar-item{
+margin: 2px 8px;
+}
+.app-title{
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+  padding-left: 48px;
+}
