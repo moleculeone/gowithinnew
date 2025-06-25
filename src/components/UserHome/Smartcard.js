@@ -73,7 +73,6 @@ const Smartcard = (currentData) => {
                     <iframe
                       className='iframe-video'
                       src={`https://www.youtube.com/embed/${currentData.currentData.code}?autoplay=1`}
-                      frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                     /> : null

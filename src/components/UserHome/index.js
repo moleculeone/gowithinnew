@@ -53,7 +53,8 @@ const UserHome = ({ setIsAuthenticated }) => {
       {
         level > 0 && level <= 3
           ?
-          <SmartCategories userLevel={level} ></SmartCategories>
+          // <SmartCategories userLevel={level} ></SmartCategories>
+           <DumbCategories />
           :
           level == 4
             ?
