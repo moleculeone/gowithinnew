@@ -1,7 +1,7 @@
 <h1 align="center">
-  <a href="https://safdarjamal.github.io/crud-app/">
+  
    Meditation App
-  </a>
+
 </h1>
 
 
