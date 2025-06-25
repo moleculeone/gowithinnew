@@ -12,10 +12,7 @@
 - [SweetAlert2](https://sweetalert2.github.io)
 
 
-## Some boilerplate code used from 
 
-CRUD App is built and maintained by [Safdar Jamal](https://safdarjamal.github.io).
-
+Some boiler plate code used from open source projects. 
 ## License
-
 CRUD App is open-source software licensed under the [MIT License](https://github.com/SafdarJamal/crud-app/blob/master/LICENSE).
