@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import Login from '../Login';
 import UserHome from '../UserHome';
+import Static from '../Static';
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(null);
@@ -12,7 +13,7 @@ const App = () => {
 
   return (
     <>
-        <UserHome setIsAuthenticated={setIsAuthenticated} />
+        <Static setIsAuthenticated={setIsAuthenticated} />
     </>
   );
 };
