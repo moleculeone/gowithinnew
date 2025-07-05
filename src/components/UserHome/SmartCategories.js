@@ -15,10 +15,20 @@ const SmartCategories = ({ userLevel }) => {
       const q = query(collection(db, "posts"), where("level", "==", userLevel.toString()));
       const querySnapshot = await getDocs(q);
       const returnedPosts = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-      setPosts(returnedPosts)
+      shuffle(returnedPosts);
+      setPosts(returnedPosts);
     }
+
     fetchData();
 
+    const shuffle = a => {
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+    };
+
+    
     const handleScroll = () => {
       const centerY = window.innerHeight / 2;
       const distances = sectionRefs.current.map((ref) => {
