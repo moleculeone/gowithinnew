@@ -7,7 +7,7 @@ const Header = ({ setIsAdding, setIsAuthenticated }) => {
     <header>
      
       <div style={{ marginTop: '30px', marginBottom: '18px' }}>
-       <h1 style={{ color: 'Black', margin: '8px' }}>Go Within</h1>
+       <h1 style={{ color: 'Black', margin: '8px', fontFamily: 'cursive' }}>Go Within</h1>
         {/* <Logout setIsAuthenticated={setIsAuthenticated} /> */}
       </div>
     </header>

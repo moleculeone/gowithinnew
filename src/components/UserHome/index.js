@@ -30,20 +30,13 @@ const UserHome = ({ setIsAuthenticated }) => {
   useEffect(() => {
   }, [level]);
 
-  const handleEdit = id => {
-    const [post] = posts.filter(post => post.id === id);
-    setSelectedPost(post);
-    setIsEditing(true);
-  };
 
   const handleLevelSelection = (data) => {
     setLevel(Number(data));
   };
 
   return (
-    <div className={'container '}>
-
-
+    <div className='container'>
       <Header
         setIsAdding={setIsAdding}
         setIsAuthenticated={setIsAuthenticated}
@@ -53,8 +46,8 @@ const UserHome = ({ setIsAuthenticated }) => {
       {
         level > 0 && level <= 3
           ?
-          // <SmartCategories userLevel={level} ></SmartCategories>
-           <DumbCategories />
+          <SmartCategories userLevel={level} ></SmartCategories>
+          //  <DumbCategories />
           :
           level == 4
             ?

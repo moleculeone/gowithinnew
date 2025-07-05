@@ -7,6 +7,7 @@ import { Storage } from '@capacitor/storage';
 import globeVar from "./globals";
 import { collection, getDocs, doc, deleteDoc } from "firebase/firestore";
 import { db } from '../../config/firestore'
+import DOMPurify from 'dompurify';
 
 let currentData = {}
 let current = 1;
@@ -61,27 +62,35 @@ const Smartcard = (currentData) => {
   };
 
   return (
-    <div>
-      <div className='category-box' >
-        <div className="category-title-container">
-          <div className="category-title" >{currentData.currentData.title}
-            <div className='description-body'>
-              {
-                currentData.currentData.contentType == 'audio' ? <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${currentData.code}&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true`}></iframe>
-                  :
-                  currentData.currentData.contentType == 'video' ?
-                    <iframe
-                      className='iframe-video'
-                      src={`https://www.youtube.com/embed/${currentData.currentData.code}?autoplay=1`}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    /> : null
+    <>
+      <div className='category-box-smart' >
+        <div className="category-container-smart">
+          <div className="category-title-smart" >{currentData.currentData.category} - {currentData.currentData.title}</div>
+          <div className='description-body-smart'>
+            {(() => {
+              switch (currentData.currentData.contentType) {
+                case 'audio':
+                  return <iframe width="100%" height="166" scrolling="no" frameborder="no" src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${currentData.code}&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true`}></iframe>
+                case 'video':
+                  return <iframe
+                    className='iframe-video-smart'
+                    src={`https://www.youtube.com/embed/${currentData.currentData.code}?rel=0&modestbranding=1`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen width="100%" height="100%" frameborder="0" 
+                  />
+                case 'text':
+                  return  <div dangerouslySetInnerHTML={{ __html:  DOMPurify.sanitize(currentData.currentData.code) }} />
+
+                default:
+                  return null
               }
-            </div>
+            })()}
+
           </div>
         </div>
+
       </div>
-    </div>
+    </>
   );
 };
 

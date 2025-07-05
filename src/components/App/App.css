@@ -1,9 +1,17 @@
-.App {
-  text-align: center;
+.App {  
 }
 
-body{
-  
+body {
+  margin: auto;
+  font-family: fantasy;
+  background-image: url(./img/meditation.svg);
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  /* height: 100vh;  */
+  margin: 0;
+  background-attachment: fixed;
+  backdrop-filter: blur(42px);
 }
 
 .App-logo {
@@ -128,12 +136,21 @@ body{
   position: absolute;
 }
 
-.menu-bar-item{
-margin: 2px 8px;
+.menu-bar-item {
+  margin: 2px 8px;
 }
-.app-title{
+
+.app-title {
   font-size: 20px;
   color: white;
   font-weight: 500;
   padding-left: 48px;
+}
+
+.container1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
 }

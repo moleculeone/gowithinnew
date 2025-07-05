@@ -23,7 +23,7 @@ const Static = ({ setIsAuthenticated }) => {
         setIsAuthenticated={setIsAuthenticated}
       />
 
-      {/* {
+      {
         level > 0 && level <= 3
           ?
            <DumbCategories />
@@ -33,7 +33,7 @@ const Static = ({ setIsAuthenticated }) => {
             <DumbCategories />
             :
             <LevelSelection onDataSend={handleLevelSelection}></LevelSelection>
-      } */}
+      }
       {
         <SmartCategories level={level}></SmartCategories>
       }

@@ -33,8 +33,8 @@ const LevelSelection = ({ onDataSend }) => {
   return (
     <div>
 
-      How familiar are you with Sahaja yoga meditation.
-      Choose random for more interactive experience.
+      <h2>How familiar are you with Sahaja yoga meditation.
+      Choose random for more interactive experience.</h2>
       <Box class="category-box-none" style={{ marginTop: '12px', 'padding': '8px' }} sx={{ minWidth: 120 }}>
         <FormControl fullWidth>
           <InputLabel id="demo-simple-select-label">Select your familiarity Level</InputLabel>

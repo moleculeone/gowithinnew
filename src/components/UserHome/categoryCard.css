@@ -20,7 +20,7 @@
 .category-item {
   width: 100%;
   padding: 8px;
-  border-radius: 8px;
+  border-radius: 4px;
   position: relative;
   /* height: 80px; */
   background-color: #d5d9d9;
@@ -29,7 +29,7 @@
 .category-item-none {
   width: 100%;
   padding: 8px;
-  border-radius: 8px;
+  border-radius: 4px;
   position: relative;
   /* height: 80px; */
   background-color: #FFFFFF;
@@ -52,7 +52,7 @@
 .category-details {
   height: calc(100vh - 120px);
   padding: 16px;
-  border-radius: 8px;
+  border-radius: 4px;
   margin: 3px;
   z-index: 99;
   width: 89%;
@@ -80,8 +80,8 @@
   margin-top: 8px;
 }
 
-.iframe-video {
-  height: calc(70vh);
+.iframe-video-smart {
+  height: calc(30vh);
   width: 100%;
 }
 
@@ -107,8 +107,7 @@
   height: 70%;
 }
 
-.category-box {
-  background-color: rgb(240, 240, 240);
+.category-box-smart {
   opacity: 0.95;
   padding: 0px;
   border-radius: 16px;
@@ -117,19 +116,21 @@
   margin-bottom: 24px;
   border-color: #1a79681c;
   border-style: solid;
-
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.category-box-none {
+.category-box-none-smart {
   background-color: #f7f8f8;
   opacity: 0.95;
   padding: 0px;
-  border-radius: 16px;
+  border-radius: 4px;
   margin: 8px;
   margin-bottom: 24px;
 }
 
-.category-box-expanded {
+.category-box-expanded-smart {
   /* top: 72px; */
   position: absolute;
   z-index: 999;
@@ -139,8 +140,8 @@
   height: 88vh;
 }
 
-.description-body {
-  margin: 12px;
+.description-body-smart {
+  margin: 8px;
 }
 
 .embeddedDocument {
@@ -148,7 +149,7 @@
   height: 100%;
 }
 
-.category-title-container {
+.category-title-container-smart {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -161,7 +162,7 @@
   gap: 8px;
 }
 
-.details {
+.details-smart {
   /* top: 72px; */
   position: absolute;
   z-index: 999;
@@ -175,8 +176,22 @@
   margin-right: auto;
 }
 
-.headerTitle {
+.headerTitle-smart {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.category-container-smart {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 16px;
+}
+
+.category-title-smart {
+  background-color: rgb(240, 240, 240);
+  padding-left: 8px;
+  padding-top: 8px;
+  font-weight: bold;
 }

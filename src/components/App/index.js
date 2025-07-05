@@ -13,7 +13,7 @@ const App = () => {
 
   return (
     <>
-        <Static setIsAuthenticated={setIsAuthenticated} />
+        <UserHome setIsAuthenticated={setIsAuthenticated} />
     </>
   );
 };

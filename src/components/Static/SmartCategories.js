@@ -24,15 +24,12 @@ const SmartCategories = ({ userLevel }) => {
   const contentexpanded = useRef(null);
 
   useEffect(() => {
-
      function fetchData() {
       setPosts(jsonItems)
       debugger;
     }
     fetchData();
   }, []);
-
-  
 
 
   return (

@@ -33,21 +33,19 @@ const SmartCategories = ({ userLevel }) => {
     fetchData();
   }, []);
 
-  
-
 
   return (
-    <div>
+    <>
       {posts ? (
         posts.map((post, i) => (
-          <div  key={post.id}>
-            <Smartcard currentData={post}></Smartcard>
-          </div>
+          < >
+            <Smartcard key={post.id} currentData={post}></Smartcard>
+          </>
         ))
       ) : (
         <div></div>
       )}
-    </div>
+    </>
   );
 };
 
