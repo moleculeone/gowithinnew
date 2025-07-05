@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/gowithinnew/static/css/main.b27c8bea.chunk.css",
-    "main.js": "/gowithinnew/static/js/main.d7ff9a05.chunk.js",
-    "main.js.map": "/gowithinnew/static/js/main.d7ff9a05.chunk.js.map",
-    "runtime-main.js": "/gowithinnew/static/js/runtime-main.405594c3.js",
-    "runtime-main.js.map": "/gowithinnew/static/js/runtime-main.405594c3.js.map",
-    "static/js/2.6e30a7ba.chunk.js": "/gowithinnew/static/js/2.6e30a7ba.chunk.js",
-    "static/js/2.6e30a7ba.chunk.js.map": "/gowithinnew/static/js/2.6e30a7ba.chunk.js.map",
-    "static/js/3.e410f019.chunk.js": "/gowithinnew/static/js/3.e410f019.chunk.js",
-    "static/js/3.e410f019.chunk.js.map": "/gowithinnew/static/js/3.e410f019.chunk.js.map",
+    "main.css": "/gowithinnew/static/css/main.ea043f1c.chunk.css",
+    "main.js": "/gowithinnew/static/js/main.5d8a8d74.chunk.js",
+    "main.js.map": "/gowithinnew/static/js/main.5d8a8d74.chunk.js.map",
+    "runtime-main.js": "/gowithinnew/static/js/runtime-main.f1bbee81.js",
+    "runtime-main.js.map": "/gowithinnew/static/js/runtime-main.f1bbee81.js.map",
+    "static/js/2.6b60a7ed.chunk.js": "/gowithinnew/static/js/2.6b60a7ed.chunk.js",
+    "static/js/2.6b60a7ed.chunk.js.map": "/gowithinnew/static/js/2.6b60a7ed.chunk.js.map",
+    "static/js/3.8e3feeea.chunk.js": "/gowithinnew/static/js/3.8e3feeea.chunk.js",
+    "static/js/3.8e3feeea.chunk.js.map": "/gowithinnew/static/js/3.8e3feeea.chunk.js.map",
     "index.html": "/gowithinnew/index.html",
-    "static/css/main.b27c8bea.chunk.css.map": "/gowithinnew/static/css/main.b27c8bea.chunk.css.map",
-    "static/js/2.6e30a7ba.chunk.js.LICENSE.txt": "/gowithinnew/static/js/2.6e30a7ba.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/gowithinnew/static/media/med3.74dcc53b.jpg"
+    "static/css/main.ea043f1c.chunk.css.map": "/gowithinnew/static/css/main.ea043f1c.chunk.css.map",
+    "static/js/2.6b60a7ed.chunk.js.LICENSE.txt": "/gowithinnew/static/js/2.6b60a7ed.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/gowithinnew/static/media/meditation.60075d7a.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.405594c3.js",
-    "static/js/2.6e30a7ba.chunk.js",
-    "static/css/main.b27c8bea.chunk.css",
-    "static/js/main.d7ff9a05.chunk.js"
+    "static/js/runtime-main.f1bbee81.js",
+    "static/js/2.6b60a7ed.chunk.js",
+    "static/css/main.ea043f1c.chunk.css",
+    "static/js/main.5d8a8d74.chunk.js"
   ]
 }
