@@ -17,7 +17,7 @@ const Quotes = ({ }) => {
 
 
   return (
-    <div class="category-box-none" style={{'padding': '8px'}}>
+    <div className="category-box-none" style={{'padding': '8px'}}>
       {quotes ? (
         quotes.map((quote, i) => (
           <div key={quote.id}>

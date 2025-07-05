@@ -67,7 +67,7 @@ const Smartcard = (currentData) => {
           <div className="category-title" >{currentData.currentData.title}
             <div className='description-body'>
               {
-                currentData.currentData.contentType == 'audio' ? <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${currentData.code}&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true`}></iframe>
+                currentData.currentData.contentType == 'audio' ? <iframe width="100%" height="166" scrolling="no" frameBorder="no" allow="autoplay" src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${currentData.code}&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true`}></iframe>
                   :
                   currentData.currentData.contentType == 'video' ?
                     <iframe

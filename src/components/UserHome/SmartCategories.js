@@ -7,45 +7,47 @@ import Smartcard from "./Smartcard";
 const SmartCategories = ({ userLevel }) => {
 
   const [posts, setPosts] = useState();
-  const [selectedPost, setSelectedPost] = useState(null);
-  const [isAdding, setIsAdding] = useState(false);
-  const [isEditing, setIsEditing] = useState(false);
-
-  const [showDetail, setShowDetail] = React.useState(false)
-  const [iscategoryexpanded, setIscategoryexpanded] = React.useState(false)
-  const [categorycloseicon, setCategorycloseicon] = React.useState(false)
-
-  let [filterdData, setFilterdData] = React.useState([])
-  let [jsonItems, setJsonItems] = React.useState([])
-
-  const content = useRef(null);
-  const contentexpanded = useRef(null);
+  const sectionRefs = useRef([]);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-
     async function fetchData() {
       const q = query(collection(db, "posts"), where("level", "==", userLevel.toString()));
       const querySnapshot = await getDocs(q);
       const returnedPosts = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
       setPosts(returnedPosts)
-      // debugger;
     }
     fetchData();
+
+    const handleScroll = () => {
+      const centerY = window.innerHeight / 2;
+      const distances = sectionRefs.current.map((ref) => {
+        if (!ref) return Infinity;
+        const rect = ref.getBoundingClientRect();
+        const elementCenter = rect.top + rect.height / 2;
+        return Math.abs(centerY - elementCenter);
+      });
+      const closestIndex = distances.indexOf(Math.min(...distances));
+      setActiveIndex(closestIndex);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
 
   return (
-    <>
+    <div style={{ marginTop: '0px' }}>
       {posts ? (
         posts.map((post, i) => (
-          < >
-            <Smartcard key={post.id} currentData={post}></Smartcard>
-          </>
+          <div key={post.id} ref={(el) => (sectionRefs.current[i] = el)} style={{ opacity: activeIndex === i ? 1 : 0.2 }}>
+            <Smartcard currentData={post}></Smartcard>
+          </div>
         ))
       ) : (
         <div></div>
       )}
-    </>
+    </div>
   );
 };
 

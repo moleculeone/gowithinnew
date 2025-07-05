@@ -30,7 +30,7 @@ const Smartcard = (currentData) => {
   const contentexpanded = useRef(null);
 
   useEffect(() => {
-    console.log(currentData.currentData)
+    // console.log(currentData.currentData)
   }, []);
 
   const onFavourite = async (selected) => {
@@ -76,7 +76,7 @@ const Smartcard = (currentData) => {
                     className='iframe-video-smart'
                     src={`https://www.youtube.com/embed/${currentData.currentData.code}?rel=0&modestbranding=1`}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen width="100%" height="100%" frameborder="0" 
+                    allowFullScreen width="100%" height="100%" frameBorder="0" 
                   />
                 case 'text':
                   return  <div dangerouslySetInnerHTML={{ __html:  DOMPurify.sanitize(currentData.currentData.code) }} />
